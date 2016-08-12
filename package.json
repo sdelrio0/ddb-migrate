@@ -1,15 +1,17 @@
 {
+  "version": "0.0.0-semntically-released",
   "name": "ddb-migrate",
-  "version": "0.1.0",
   "description": "Manage AWS DynamoDB migrations with ease.",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "export NODE_ENV=test && mocha --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sdelrio0/ddb-migrate.git"
+    "url": "https://github.com/sdelrio0/ddb-migrate.git"
   },
   "keywords": [
     "aws",
@@ -36,6 +38,11 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.0.2"
+    "commitizen": "^2.8.5",
+    "mocha": "^3.0.2",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
