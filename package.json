@@ -4,7 +4,8 @@
   "description": "Manage AWS DynamoDB migrations with ease.",
   "main": "index.js",
   "scripts": {
-    "test": "export NODE_ENV=test && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests"
+    "test": "export NODE_ENV=test && mocha --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
