@@ -24,13 +24,12 @@
     "url": "https://github.com/sdelrio0/ddb-migrate/issues"
   },
   "homepage": "https://github.com/sdelrio0/ddb-migrate#readme",
+  "bin": {
+    "ddb": "lib/index.js"
+  },
   "preferGlobal": true,
   "dependencies": {
     "aws-sdk": "^2.5.0",
-    "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-watch": "^2.0.2",
     "bluebird": "^3.4.1",
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
