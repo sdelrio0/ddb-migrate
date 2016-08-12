@@ -1,0 +1,27 @@
+{
+  "name": "ddb-migrate",
+  "version": "0.1.0",
+  "description": "Manage AWS DynamoDB migrations with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdelrio0/ddb-migrate.git"
+  },
+  "keywords": [
+    "aws",
+    "dynamodb",
+    "dynamo",
+    "db",
+    "migrate",
+    "manage"
+  ],
+  "author": "Sergio <sdelrio0@gmail.com> (http://xilix.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sdelrio0/ddb-migrate/issues"
+  },
+  "homepage": "https://github.com/sdelrio0/ddb-migrate#readme"
+}
