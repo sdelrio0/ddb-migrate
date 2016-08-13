@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "check-coverage": "istanbul check-coverage --statements 10 --branches 10 --functions 10 --lines 10",
+    "check-coverage": "istanbul check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
     "test": "export NODE_ENV=test && istanbul cover -x **/__tests__/** _mocha -- -R spec --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
     "test:watch": "npm run test -- --watch",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -36,6 +36,7 @@
   "dependencies": {
     "aws-sdk": "^2.5.0",
     "bluebird": "^3.4.1",
+    "minimist": "^1.2.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
