@@ -6,6 +6,6 @@ describe('first test', function() {
   });
   
   it('should also work', function() {
-    expect(false).to.be.false;
+    expect(1).to.equal(1);
   });
 });
