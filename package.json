@@ -13,7 +13,7 @@
     "cover:report:check": "npm run cover:report && npm run check-coverage",
     "check-coverage": "nyc check-coverage --statements 10 --branches 10 --functions 10 --lines 10",
     "build": "babel --copy-files --out-dir dist lib",
-    "report-coverage": "cat ./coverage/lcov.info && cat ./coverage/lcov.info | codecov",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
