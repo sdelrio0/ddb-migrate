@@ -2,6 +2,13 @@ ddb-migrate
 ===========
 AWS DynamoDB Migration Tools for Node.js
 
+Description
+===========
+
+
+Getting Started
+===============
+
 
 MIT Licence
 ===========
