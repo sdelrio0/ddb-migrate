@@ -1,17 +1,16 @@
 import { expect } from 'chai';
-import { fn } from '../../lib';
+import { ddb } from '../../lib';
 
-describe('ddb', function() {
+describe('dynamodb', function() {
   describe('list', function() {
-    it('returns an array', function() {
-      // return ddb.ddb('listTables')
-      //   .then(res => {
-      //     return Promise.all([
-      //       expect(res).not.to.be.undefined,
-      //       expect(res.TableNames).to.be.an('array')
-      //     ]);
-      //   });
-      expect(fn(2)).to.equal(3);
+    it('returns an empty array', function() {
+      return ddb('listTables')
+        .then(res => {
+          return Promise.all([
+            expect(res).not.to.be.undefined,
+            expect(res.TableNames).to.be.an('array')
+          ]);
+        });
     });
   });
 });

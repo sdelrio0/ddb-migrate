@@ -10,3 +10,4 @@ logs
 .git
 coverage
 .nyc_output
+schema.json
