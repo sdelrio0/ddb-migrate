@@ -6,13 +6,13 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist lib",
-    "test": "export NODE_ENV=test && mocha --require ./__tests__/test_helper.js --recursive ./__tests__/tests --compilers js:babel-register",
+    "test": "export NODE_ENV=test && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
     "test:watch": "npm run test -- -w",
     "commit": "git-cz",
     "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "cover": "nyc npm run test"
+    "cover": "nyc --reporter=lcov npm run test"
   },
   "repository": {
     "type": "git",
@@ -67,7 +67,7 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     },
-    "ghooks": {
+    "_ghooks": {
       "pre-commit": "npm run cover && npm run check-coverage"
     }
   }
