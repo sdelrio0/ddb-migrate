@@ -19,7 +19,24 @@ Getting Started
 
 Usage
 =====
-
+```
+$ ddb migrate # runs all migrations *up* sequentially
+$ ddb migrate:up # same as above
+$ ddb clear # deletes all tables
+$ ddb seed # executes seeds
+$ ddb setup # migrate -> seed
+$ ddb reset # clear -> setup
+$ ddb migrate VERSION=YYYYMMDDHHMMSS # migrates only this version *up*
+$ ddb migrate:up VERSION=YYYYMMDDHHMMSS # same as above
+$ ddb migrate:down VERSION=YYYYMMDDHHMMSS # migrates only this version *down*
+$ ddb migrate:down # migrates all versions backwards and *down*
+$ ddb rollback # last migration *down*
+$ ddb create tableName
+$ ddb update tableName
+$ ddb describe tableName
+$ ddb list
+$ ddb scan tableName
+```
 
 MIT Licence
 ===========
