@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "test": "export NODE_ENV=test && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
+    "test": "export NODE_ENV=test AWS_DDB_ENDPOINT=http://localhost:8000 && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
     "test:watch": "npm run test -- -w",
     "commit": "git-cz",
     "cover": "nyc --reporter=lcov npm run test",
@@ -58,6 +58,7 @@
     "chai": "^3.5.0",
     "codecov.io": "^0.1.6",
     "commitizen": "^2.8.5",
+    "ddb-local": "^0.2.0",
     "ghooks": "^1.3.2",
     "istanbul": "^0.4.4",
     "mocha": "^3.0.2",

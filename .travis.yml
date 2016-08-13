@@ -14,11 +14,11 @@ node_js:
   - '4'
 before_install:
   - docker pull fingershock/dynamodb-local
-  - docker run
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
 script:
+  - docker run
   - npm run cover
 #  - npm run check-coverage
   - npm run build
