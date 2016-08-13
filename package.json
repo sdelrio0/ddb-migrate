@@ -2,14 +2,17 @@
   "version": "0.0.0-semntically-released",
   "name": "ddb-migrate",
   "description": "Manage AWS DynamoDB migrations with ease.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files --out-dir dist lib",
+    "test": "export NODE_ENV=test && mocha --require ./__tests__/test_helper.js --recursive ./__tests__/tests --compilers js:babel-register",
+    "test:watch": "npm run test -- -w",
     "commit": "git-cz",
-    "check-coverage": "istanbul check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
-    "test": "export NODE_ENV=test && istanbul cover -x **/__tests__/** _mocha -- -R spec --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
-    "test:watch": "npm run test -- --watch",
+    "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "report-coverage": "cat ./coverage/lcov.info | codecov"
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "cover": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,10 @@
     "db",
     "migrate",
     "manage"
+  ],
+  "files": [
+    "dist",
+    "../README.md"
   ],
   "author": "Sergio <sdelrio0@gmail.com> (http://xilix.io/)",
   "license": "MIT",
@@ -40,12 +47,20 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "codecov.io": "^0.1.6",
     "commitizen": "^2.8.5",
     "ghooks": "^1.3.2",
     "istanbul": "^0.4.4",
     "mocha": "^3.0.2",
+    "nyc": "^7.1.0",
+    "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5"
   },
   "config": {
@@ -53,7 +68,7 @@
       "path": "node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test && npm run check-coverage"
+      "pre-commit": "npm run cover && npm run check-coverage"
     }
   }
 }
