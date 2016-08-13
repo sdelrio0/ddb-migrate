@@ -3,7 +3,7 @@ ddb-migrate
 [![Travis build](https://img.shields.io/travis/sdelrio0/ddb-migrate.svg?style=flat)](https://travis-ci.org/sdelrio0/ddb-migrate)
 [![Codecov coverage](https://img.shields.io/codecov/c/github/sdelrio0/ddb-migrate.svg?style=flat)]()
 [![npm version](https://img.shields.io/npm/v/ddb-migrate.svg?style=flat)]()
-[![npm licence](https://img.shields.io/npm/l/ddb-migrate.svg?style=flat)]()
+[![npm licence](https://img.shields.io/npm/l/ddb-migrate.svg?style=flat)](https://en.wikipedia.org/wiki/MIT_License)
 
 AWS DynamoDB Migration Tools for Node.js
 
