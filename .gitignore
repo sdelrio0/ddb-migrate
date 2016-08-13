@@ -2,10 +2,11 @@ node_modules
 .idea
 .env
 npm-debug.log*
-build
+dist
 logs
 *.log
 .DS_Store
 .tmp
 .git
-coverage/
+coverage
+.nyc_output
