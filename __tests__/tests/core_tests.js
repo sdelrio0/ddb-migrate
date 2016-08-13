@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { ddb } from '../../lib';
+import { ddb } from '../../lib/core';
 
 describe('dynamodb', function() {
   describe('list', function() {
