@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/sdelrio0/ddb-migrate#readme",
   "bin": {
-    "ddb": "lib/index.js"
+    "ddb": "dist/index.js"
   },
   "preferGlobal": true,
   "dependencies": {
