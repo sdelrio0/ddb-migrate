@@ -18,7 +18,7 @@ before_install:
 before_script:
   - npm prune
 script:
-  - docker run
+  - docker run --rm -P fingershock/dynamodb-local
   - npm run cover
 #  - npm run check-coverage
   - npm run build
