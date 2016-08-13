@@ -5,14 +5,14 @@
   "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "babel --copy-files --out-dir dist lib",
     "test": "export NODE_ENV=test && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
     "test:watch": "npm run test -- -w",
     "commit": "git-cz",
+    "cover": "nyc  --reporter=lcov npm run test",
     "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "build": "babel --copy-files --out-dir dist lib",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "cover": "nyc report --reporter=lcov npm run test"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
