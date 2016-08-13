@@ -63,7 +63,8 @@
     "mocha": "^3.0.2",
     "nyc": "^7.1.0",
     "rimraf": "^2.5.4",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^4.3.5",
+    "uuid": "^2.0.2"
   },
   "config": {
     "commitizen": {
