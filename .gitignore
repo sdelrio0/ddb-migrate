@@ -11,3 +11,4 @@ logs
 coverage
 .nyc_output
 schema.json
+.dynamodb
