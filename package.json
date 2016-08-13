@@ -8,10 +8,10 @@
     "test": "export NODE_ENV=test && mocha --compilers js:babel-core/register --require ./__tests__/test_helper.js --recursive ./__tests__/tests",
     "test:watch": "npm run test -- -w",
     "commit": "git-cz",
-    "cover": "nyc  --reporter=lcov npm run test",
-    "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
+    "cover": "nyc --reporter=json npm run test",
+    "check-coverage": "nyc check-coverage --statements 10 --branches 10 --functions 10 --lines 10",
     "build": "babel --copy-files --out-dir dist lib",
-    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "report-coverage": "cat ./coverage/coverage-final.json | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {

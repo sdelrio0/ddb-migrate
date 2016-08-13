@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import { fn } from '../../lib';
 
 describe('ddb', function() {
   describe('list', function() {
@@ -10,7 +11,7 @@ describe('ddb', function() {
       //       expect(res.TableNames).to.be.an('array')
       //     ]);
       //   });
-      expect(true).to.equal(true);
+      expect(fn(2)).to.equal(3);
     });
   });
 });
