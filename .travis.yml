@@ -1,4 +1,6 @@
-sudo: false
+sudo: required
+services:
+  - docker
 language: node_js
 cache:
   directories:
@@ -11,6 +13,8 @@ notifications:
 node_js:
   - '4'
 before_install:
+  - docker pull fingershock/dynamodb-local
+  - docker run --rm -P fingershock/dynamodb-local
   - npm i -g npm@^2.0.0
 before_script:
   - npm prune
