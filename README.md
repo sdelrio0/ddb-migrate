@@ -6,6 +6,7 @@ ddb-migrate
 [![npm licence](https://img.shields.io/npm/l/ddb-migrate.svg?style=flat)]()
 
 AWS DynamoDB Migration Tools for Node.js
+**Under development. Not intended for production use.*
 
 Introduction
 ============
@@ -15,6 +16,8 @@ Getting Started
 ===============
 
 
+Usage
+=====
 
 
 MIT Licence
